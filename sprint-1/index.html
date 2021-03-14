@@ -4,29 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>BandSite-Biography</title>
   </head>
   <body>
     <header>
-      <nav class="narBar">
+      <!-- navigation bar -->
+      <nav class="navBar">
         <a class="navBar__logo" href="./index.html"
-          ><img src="./assets/Logo/Logo-bandsite.png" alt="bandsite_logo"
+          ><img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite_logo"
         /></a>
-        <ul>
-          <a href="./index.html"><li>Biography</li></a>
-          <a href="#"><li>Shows</li></a>
+        <ul class="navBar__links">
+          <li class="navBar__link navBar__link--selected">
+            <a href="./index.html">Biography</a>
+          </li>
+          <li class="navBar__link"><a href="#">Shows</a></li>
         </ul>
       </nav>
+      <!-- hero -->
       <div class="hero">
-        <h1 class="hero__title">Gaspard Auge & Xavier de Rosnay</h1>
+        <h1 class="hero__title">
+          Gaspard Auge &<br />
+          Xavier de Rosnay
+        </h1>
       </div>
     </header>
 
     <main>
       <div class="about">
-        <h2 class="about__title">About the Musicians</h2>
-        <img src="" alt="" />
+        <h1 class="about__title">About the Musicians</h1>
+        <img class="about__image" src="./assets/Images/story.jpg" alt="" />
         <p class="about__quote">
           “We are more comfortable with not fighting what comes naturally.
           Before we might have thought, ‘We need to be smarter than this’”
@@ -35,7 +42,7 @@
       </div>
 
       <div class="content">
-        <h3 class="content__title">Xavier de Rosnay & Gaspard Augé</h3>
+        <h2 class="content__title">Xavier de Rosnay & Gaspard Augé</h2>
         <p class="content__paragraph">
           Xavier De Ronsay and Gaspard Augé had a few mutual friends, who
           happened to run a record label, seeking tracks for a compilation. With
@@ -58,7 +65,7 @@
         </p>
       </div>
       <div class="photos">
-        <h2 class="photos__title">Photo Gallery</h2>
+        <h1 class="photos__title">Photo Gallery</h1>
         <div class="photos__grid">
           <img
             src="./assets/Images/Photo-gallery-1.jpg"
@@ -102,31 +109,69 @@
 
     <footer>
       <div class="social">
-        <h2 class="social__title">Get In Touch</h2>
+        <h1 class="social__title">Get In Touch</h1>
         <ul class="social__icons">
-          <a href="https://instagram.com"
-            ><li class="social__icon">
+          <a class="social__icon" href="https://instagram.com"
+            ><li>
               <img
                 src="./assets/Icons/SVG/Icon-instagram.svg"
                 alt="instagram_icon"
               /></li
           ></a>
-          <a href="https://facebook.com">
-            <li class="social__icon">
+          <a class="social__icon" href="https://facebook.com">
+            <li>
               <img
                 src="./assets/Icons/SVG/Icon-facebook.svg"
                 alt="facebook_icon"
               /></li
           ></a>
-          <a href="https://twitter.com">
-            <li class="social__icon">
+          <a class="social__icon" href="https://twitter.com">
+            <li>
               <img
                 src="./assets/Icons/SVG/Icon-twitter.svg"
                 alt="twitter_icon"
               /></li
           ></a>
         </ul>
-        <img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite_logo" />
+        <img
+          class="social__logo"
+          src="./assets/Logo/Logo-bandsite.svg"
+          alt="bandsite_logo"
+        />
+      </div>
+
+      <div class="contact">
+        <div class="contact__group">
+          <h4 class="contact__name">
+            Richard Rovner <br />The Bees Knees Management
+          </h4>
+          <h5 class="contact__address">
+            460 King Street West <br />
+            Toronto, Ontario M5V 1L7
+          </h5>
+          <h5 class="contact__email">info@thebeesknees.com</h5>
+        </div>
+        <div class="contact__group">
+          <h4 class="contact__name">
+            Marsha Vlasic <br />Artist Group International
+          </h4>
+          <h5 class="contact__address">
+            Booking Agent for <br />US / South America / Japan
+          </h5>
+          <h5 class="contact__email">marsha.vlasic@artistgrp.com</h5>
+        </div>
+        <div class="contact__group">
+          <h4 class="contact__name">
+            Russel Warby <br />William Morrir Entertainment
+          </h4>
+          <h5 class="contact__address">Booking Agent for <br />UK / EU / AU</h5>
+          <h5 class="contact__email">RLW@wmeentertainment.com</h5>
+        </div>
+
+        <h5 class="contact__copyright">
+          Copyright The Bees Knees © 2018 <br />
+          All Rights Reserved
+        </h5>
       </div>
     </footer>
   </body>
