@@ -45,21 +45,53 @@ body {
 
 h1 {
   font-size: 24px;
+  line-height: 32px;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 h2 {
   font-size: 14px;
   line-height: 22px;
 }
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 
 h4 {
   font-size: 14px;
   line-height: 18px;
 }
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 
 h5 {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 
 a {
@@ -108,12 +140,27 @@ ul {
   justify-content: center;
   align-items: center;
   width: 50%;
+  box-sizing: content-box;
+}
+@media screen and (min-width: 768px) {
+  .navBar__link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navBar__link > div {
+    display: flex;
+    align-items: flex-end;
+    height: 32px;
+  }
 }
 .navBar__link a {
   color: #ffffff;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   opacity: 0.7;
 }
 .navBar__link--selected {
@@ -134,13 +181,29 @@ ul {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+}
 .hero__title {
   margin-left: 5vw;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
 
 main > * {
   padding: 0 5vw;
+}
+@media screen and (min-width: 768px) {
+  main > * {
+    padding: 0 3.125vw;
+  }
 }
 
 .about {
@@ -154,6 +217,12 @@ main > * {
   margin-bottom: 7.5vw;
   line-height: 24px;
 }
+@media screen and (min-width: 768px) {
+  .about__title {
+    margin-top: 56px;
+    margin-bottom: 40px;
+  }
+}
 .about__image {
   width: 100%;
   display: block;
@@ -163,14 +232,26 @@ main > * {
   margin-bottom: 32px;
   line-height: 24px;
 }
+@media screen and (min-width: 768px) {
+  .about__quote {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 .about__person {
   margin-top: 0;
-  margin-bottom: 12.5vw;
+  margin-bottom: 48px;
   font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .about__person {
+    font-size: 16px;
+  }
 }
 
 .content {
-  margin-bottom: 12.5vw;
+  margin-bottom: 32px;
 }
 .content__title {
   font-weight: 600;
@@ -178,20 +259,54 @@ main > * {
   margin-top: 0;
   margin-bottom: 24px;
 }
-.content__paragraph {
+@media screen and (min-width: 768px) {
+  .content__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+.content__artical {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
 }
+@media screen and (min-width: 768px) {
+  .content__artical {
+    display: flex;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.content__paragraph {
+  margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .content__paragraph:first-child {
+    margin-top: 0;
+    margin-right: 24px;
+  }
+}
 
 .photos {
   background-color: #fafafa;
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+  padding-top: 56px;
+  padding-bottom: 24px;
 }
 .photos__title {
   margin-top: 0;
   margin-bottom: 7.5vw;
+}
+@media screen and (min-width: 768px) {
+  .photos__title {
+    margin-bottom: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .photos__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .photos__grid img {
   width: 100%;
@@ -199,13 +314,39 @@ main > * {
   margin-top: 0;
   margin-bottom: 5vw;
 }
+@media screen and (min-width: 768px) {
+  .photos__grid img {
+    width: 29.17vw;
+    margin-bottom: 3.125vw;
+  }
+}
 
 footer {
   background-color: #323232;
   color: #ffffff;
   padding-bottom: 54px;
 }
+@media screen and (min-width: 768px) {
+  footer > * {
+    margin: 0 3.125vw;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social--left {
+    display: flex;
+    align-items: center;
+  }
+}
 .social__title {
   font-weight: bold;
   font-size: 36px;
@@ -213,11 +354,24 @@ footer {
   margin-top: 0;
   padding-top: 40px;
 }
+@media screen and (min-width: 768px) {
+  .social__title {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+}
 .social__icons {
   display: flex;
   padding-left: 5vw;
   margin-top: 0;
   margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .social__icons {
+    margin-bottom: 0;
+    padding-left: 54px;
+  }
 }
 .social__icon {
   margin-right: 34px;
@@ -225,12 +379,42 @@ footer {
   width: -moz-fit-content;
   width: fit-content;
 }
+@media screen and (min-width: 768px) {
+  .social__icon {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .social__icon > li {
+    display: flex;
+    align-items: flex-end;
+  }
+}
 .social__logo {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .social__logo {
+    display: block;
+    height: 20px;
+  }
 }
 
 .contact {
   margin-left: 3.125vw;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__group {
+    width: 29.17vw;
+  }
+  .contact__group:nth-child(2) {
+    margin: 0 3.125vw;
+  }
 }
 .contact__name {
   font-weight: 500;
@@ -238,19 +422,47 @@ footer {
   margin-bottom: 5vw;
   line-height: 20px;
 }
+@media screen and (min-width: 768px) {
+  .contact__name {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+}
 .contact__address, .contact__email, .contact__copyright {
   font-weight: 300;
   line-height: 18px;
 }
+@media screen and (min-width: 768px) {
+  .contact__address, .contact__email, .contact__copyright {
+    font-size: 14px;
+  }
+}
 .contact__address {
   margin-top: 0;
   margin-bottom: 5vw;
+  margin-bottom: 32px;
 }
 .contact__email {
   margin-top: 0;
   margin-bottom: 7.5vw;
 }
+@media screen and (min-width: 768px) {
+  .contact__email {
+    margin-bottom: 32px;
+  }
+}
 .contact__copyright {
   margin-top: 10vw;
   margin-bottom: 0;
+  margin-left: 3.125vw;
+}
+@media screen and (min-width: 768px) {
+  .contact__copyright {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__copyright > br {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

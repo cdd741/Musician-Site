@@ -9,21 +9,49 @@ body {
 
 h1 {
   font-size: 24px;
+  line-height: 32px;
+  
+  @include tablet {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 h2 {
   font-size: 14px;
   line-height: 22px;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h3{
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 h4 {
   font-size: 14px;
   line-height: 18px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 h5 {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 22px;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 
 a {
@@ -50,7 +78,6 @@ ul {
 
   &__logo {
     display: block;
-
     width: fit-content;
     height: 19px;
     margin: 5vw auto 5vw;
@@ -73,9 +100,26 @@ ul {
     align-items: center;
     width: 50%;
 
+    box-sizing: content-box;
+
+    @include tablet {
+      width: fit-content;
+      margin-left: 24px;
+      margin-right: 24px;
+
+      padding: 0 10px;
+    }
+
+    & > div {
+      @include tablet {
+        display: flex;
+        align-items: flex-end;
+        height: 32px;
+      }
+    }
+
     a {
       color: $white;
-      height: fit-content;
       opacity: 0.7;
     }
 
@@ -102,9 +146,18 @@ ul {
   display: flex;
   align-items: center;
 
+  @include tablet {
+    height: 400px;
+  }
+
   &__title {
     margin-left: $mobile-padding;
     color: $white;
+
+    @include tablet {
+      font-size: 60px;
+      line-height: 80px;
+    }
   }
 }
 
@@ -112,7 +165,12 @@ ul {
 main {
   & > * {
     padding: 0 $mobile-padding;
+
+    @include tablet {
+      padding: 0 $tablet-padding;
+    }
   }
+
 }
 
 .about {
@@ -123,6 +181,11 @@ main {
     margin-top: 10vw;
     margin-bottom: 7.5vw;
     line-height: 24px;
+
+    @include tablet {
+      margin-top: 56px;
+      margin-bottom: 40px;
+    }
   }
 
   &__image {
@@ -134,17 +197,27 @@ main {
     margin-top: 7.5vw;
     margin-bottom: 32px;
     line-height: 24px;
+
+    @include tablet {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   &__person {
     margin-top: 0;
-    margin-bottom: 12.5vw;
+    margin-bottom: 48px;
     font-size: 14px;
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }
 
 .content {
-  margin-bottom: 12.5vw;
+  margin-bottom: 32px;
 
   &__title {
     font-weight: 600;
@@ -152,32 +225,77 @@ main {
 
     margin-top: 0;
     margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 24px;
+      font-weight: bold;
+
+      // margin-bottom: 0;
+    }
   }
 
-  &__paragraph {
+  &__artical {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+
+    
+
+    @include tablet {
+      display: flex;
+
+      
+      font-size: 14px;
+      line-height: 22px;
+
+    }
+  }
+
+  &__paragraph{
+    margin-top: 0;
+
+    &:first-child {
+      @include tablet {
+        margin-top: 0;
+        margin-right: 24px;
+      }
+    }
   }
 }
 
 .photos {
   background-color: $alabaster;
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+  padding-top: 56px;
+  padding-bottom: 24px;
 
   &__title {
     margin-top: 0;
     margin-bottom: 7.5vw;
+
+    @include tablet {
+      margin-bottom: 48px;
+    }
   }
 
   &__grid {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
     img {
       width: 100%;
       display: block;
 
       margin-top: 0;
       margin-bottom: 5vw;
+
+      @include tablet {
+        width: 29.17vw;
+        margin-bottom: 3.125vw;
+
+      }
     }
   }
 }
@@ -187,16 +305,47 @@ footer {
   background-color: $black;
   color: $white;
   padding-bottom: 54px;
+  
+  & > * {
+    @include tablet {
+      margin: 0 $tablet-padding;
+    }
+  }
 }
 
+
+
 .social {
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  &--left {
+    @include tablet{
+      display: flex;
+      align-items: center;
+    }
+    
+  }
+
   &__title {
     font-weight: bold;
     font-size: 36px;
     margin-left: 10px;
     margin-top: 0;
     padding-top: 40px;
-    // letter-spacing: 1px;
+
+    @include tablet {
+      
+      margin-left: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+    }
   }
 
   &__icons {
@@ -204,26 +353,63 @@ footer {
     padding-left: 5vw;
     margin-top: 0;
     margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 0;
+      padding-left: 54px;
+    }
   }
 
   &__icon {
     margin-right: 34px;
     width: fit-content;
+
+    @include tablet {
+      height: fit-content;
+       & > li {
+         display: flex;
+         align-items: flex-end;
+       }
+    }
   }
 
   &__logo {
     display: none;
+
+    @include tablet {
+      display: block;
+      height: 20px;
+    }
   }
 }
 
 .contact {
   margin-left: 3.125vw;
 
+  @include tablet {
+    display: flex;
+  }
+
+  &__group {
+    @include tablet {
+      width: 29.17vw;
+      
+      &:nth-child(2) {
+        margin: 0 3.125vw;
+      }
+    }
+  };
+
   &__name {
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 5vw;
     line-height: 20px;
+
+    @include tablet {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
   }
 
   &__address,
@@ -231,20 +417,41 @@ footer {
   &__copyright {
     font-weight: 300;
     line-height: 18px;
+
+    @include tablet {
+      font-size: 14px;
+    }
   }
 
   &__address {
     margin-top: 0;
     margin-bottom: 5vw;
+
+    margin-bottom: 32px;
   }
 
   &__email {
     margin-top: 0;
     margin-bottom: 7.5vw;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__copyright {
     margin-top: 10vw;
     margin-bottom: 0;
+    margin-left: 3.125vw;
+
+    @include tablet {
+      margin-top: 0;
+    }
+
+    & > br {
+      @include tablet {
+        display: none;
+      }
+    }
   }
 }
