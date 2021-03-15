@@ -41,6 +41,7 @@
 body {
   font-family: "Acenir Next";
   margin: 0;
+  color: #323232;
 }
 
 h1 {
@@ -114,6 +115,12 @@ ul {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    padding: 0 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navBar {
+    padding: 0 14.0625vw;
   }
 }
 .navBar__logo {
@@ -126,7 +133,13 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .navBar__logo {
-    margin: 0 3.125vw;
+    margin: 0;
+    margin-right: 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navBar__logo {
+    margin-right: 56px;
   }
 }
 .navBar__links {
@@ -150,6 +163,14 @@ ul {
     margin-left: 24px;
     margin-right: 24px;
     padding: 0 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navBar__link {
+    width: 80px;
+    margin-left: 0;
+    margin-right: 56px;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -176,7 +197,7 @@ ul {
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(50, 50, 50, 0.5);
   width: 100vw;
-  height: 57.1875vw;
+  height: 183px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -184,6 +205,11 @@ ul {
 @media screen and (min-width: 768px) {
   .hero {
     height: 400px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 670px;
   }
 }
 .hero__title {
@@ -194,6 +220,12 @@ ul {
   .hero__title {
     font-size: 60px;
     line-height: 80px;
+    margin-left: 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    margin-left: 14.0625vw;
   }
 }
 
@@ -203,6 +235,11 @@ main > * {
 @media screen and (min-width: 768px) {
   main > * {
     padding: 0 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  main > * {
+    padding: 0 14.0625vw;
   }
 }
 
@@ -223,9 +260,21 @@ main > * {
     margin-bottom: 40px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__title {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
 .about__image {
   width: 100%;
   display: block;
+}
+@media screen and (min-width: 1280px) {
+  .about__image {
+    width: 56.875vw;
+    margin: auto;
+  }
 }
 .about__quote {
   margin-top: 7.5vw;
@@ -239,6 +288,12 @@ main > * {
     line-height: 32px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__quote {
+    margin: 48px auto 40px;
+    width: 56.875vw;
+  }
+}
 .about__person {
   margin-top: 0;
   margin-bottom: 48px;
@@ -249,9 +304,22 @@ main > * {
     font-size: 16px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__person {
+    width: 56.875vw;
+    margin: auto;
+    margin-bottom: 56px;
+  }
+}
 
 .content {
   margin-bottom: 32px;
+}
+@media screen and (min-width: 1280px) {
+  .content {
+    width: 56.875vw;
+    margin: 0 auto 48px;
+  }
 }
 .content__title {
   font-weight: 600;
@@ -263,6 +331,11 @@ main > * {
   .content__title {
     font-size: 24px;
     font-weight: bold;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .content__title {
+    margin-bottom: 32px;
   }
 }
 .content__artical {
@@ -280,10 +353,20 @@ main > * {
 .content__paragraph {
   margin-top: 0;
 }
+@media screen and (min-width: 1280px) {
+  .content__paragraph {
+    width: 32.8125vw;
+  }
+}
 @media screen and (min-width: 768px) {
   .content__paragraph:first-child {
     margin-top: 0;
     margin-right: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .content__paragraph:first-child {
+    margin-right: 40px;
   }
 }
 
@@ -291,6 +374,12 @@ main > * {
   background-color: #fafafa;
   padding-top: 56px;
   padding-bottom: 24px;
+}
+@media screen and (min-width: 1280px) {
+  .photos {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
 }
 .photos__title {
   margin-top: 0;
@@ -301,11 +390,21 @@ main > * {
     margin-bottom: 48px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .photos__title {
+    margin-bottom: 64px;
+  }
+}
 @media screen and (min-width: 768px) {
   .photos__grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photos__grid:nth-last-child(-n+3) {
+    margin-bottom: 0;
   }
 }
 .photos__grid img {
@@ -318,6 +417,17 @@ main > * {
   .photos__grid img {
     width: 29.17vw;
     margin-bottom: 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photos__grid img {
+    width: 22.71vw;
+    margin-bottom: 1.875vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photos__grid img:nth-last-child(-n+3) {
+    margin-bottom: 0;
   }
 }
 
@@ -347,6 +457,13 @@ footer {
     align-items: center;
   }
 }
+@media screen and (min-width: 1280px) {
+  .social {
+    margin-left: 14.0625vw;
+    margin-right: 14.0625vw;
+    margin-bottom: 54px;
+  }
+}
 .social__title {
   font-weight: bold;
   font-size: 36px;
@@ -359,6 +476,11 @@ footer {
     margin-left: 0;
     margin-bottom: 0;
     padding-top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__title {
+    width: 21.5625vw;
   }
 }
 .social__icons {
@@ -390,6 +512,11 @@ footer {
     align-items: flex-end;
   }
 }
+@media screen and (min-width: 1280px) {
+  .social__icon {
+    margin-right: 32px;
+  }
+}
 .social__logo {
   display: none;
 }
@@ -399,6 +526,11 @@ footer {
     height: 20px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .social__logo {
+    height: 24px;
+  }
+}
 
 .contact {
   margin-left: 3.125vw;
@@ -406,6 +538,12 @@ footer {
 @media screen and (min-width: 768px) {
   .contact {
     display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact {
+    margin-left: 14.0625vw;
+    margin-right: 14.0625vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -442,6 +580,11 @@ footer {
   margin-bottom: 5vw;
   margin-bottom: 32px;
 }
+@media screen and (min-width: 1280px) {
+  .contact__address {
+    margin-bottom: 24px;
+  }
+}
 .contact__email {
   margin-top: 0;
   margin-bottom: 7.5vw;
@@ -449,6 +592,11 @@ footer {
 @media screen and (min-width: 768px) {
   .contact__email {
     margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact__email {
+    margin-bottom: 40px;
   }
 }
 .contact__copyright {
@@ -459,6 +607,12 @@ footer {
 @media screen and (min-width: 768px) {
   .contact__copyright {
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact__copyright {
+    margin-left: 14.0625vw;
+    margin-right: 14.0625vw;
   }
 }
 @media screen and (min-width: 768px) {
