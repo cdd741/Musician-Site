@@ -184,6 +184,9 @@ ul {
   color: #ffffff;
   opacity: 0.7;
 }
+.navBar__link a:hover {
+  opacity: 1;
+}
 .navBar__link--selected {
   border-bottom: 4px solid #ffffff;
 }
@@ -417,6 +420,10 @@ main > * {
   .photos__grid img {
     width: 29.17vw;
     margin-bottom: 3.125vw;
+    filter: grayscale(100%);
+  }
+  .photos__grid img:hover {
+    filter: none;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -545,6 +552,9 @@ footer {
     margin-left: 14.0625vw;
     margin-right: 14.0625vw;
   }
+}
+.contact a {
+  color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .contact__group {
