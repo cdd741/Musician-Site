@@ -1,0 +1,156 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/typography' as *;
+
+body {
+  font-family: "Acenir Next";
+  margin: 0;
+  color: $black;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 22px;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h3 {
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+h4 {
+  font-size: 14px;
+  line-height: 18px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 22px;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// header section
+.navBar {
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  background-color: $black;
+
+  @include tablet {
+    height: 80px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 $tablet-padding;
+  }
+
+  @include desktop {
+    padding: 0 $desktop-padding;
+  }
+
+  &__logo {
+    display: block;
+    width: fit-content;
+    height: 19px;
+    margin: 5vw auto 5vw;
+
+    @include tablet {
+      margin: 0;
+      margin-right: 3.125vw;
+    }
+
+    @include desktop {
+      margin-right: 56px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+    box-sizing: content-box;
+
+    @include tablet {
+      width: fit-content;
+      margin-left: 24px;
+      margin-right: 24px;
+
+      padding: 0 10px;
+    }
+
+    @include desktop {
+      width: 80px;
+      margin-left: 0;
+      margin-right: 56px;
+      padding: 0;
+    }
+
+    & > div {
+      @include tablet {
+        display: flex;
+        align-items: flex-end;
+        height: 32px;
+      }
+    }
+
+    a {
+      color: $white;
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &--selected {
+      border-bottom: 4px solid $white;
+
+      a {
+        opacity: 1;
+      }
+    }
+  }
+}

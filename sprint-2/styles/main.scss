@@ -2,162 +2,6 @@
 @use 'partials/mixins' as *;
 @use 'partials/typography' as *;
 
-body {
-  font-family: "Acenir Next";
-  margin: 0;
-  color: $black;
-}
-
-h1 {
-  font-size: 24px;
-  line-height: 32px;
-  
-  @include tablet {
-    font-size: 36px;
-    line-height: 44px;
-  }
-}
-
-h2 {
-  font-size: 14px;
-  line-height: 22px;
-
-  @include tablet {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
-h3{
-  @include tablet {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-h4 {
-  font-size: 14px;
-  line-height: 18px;
-
-  @include tablet {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
-h5 {
-  font-size: 12px;
-  line-height: 22px;
-
-  @include tablet {
-    font-size: 12px;
-    line-height: 20px;
-  }
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
-// header section
-.navBar {
-  height: 25vw;
-  display: flex;
-  flex-direction: column;
-  background-color: $black;
-
-  @include tablet {
-    height: 80px;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 $tablet-padding;
-  }
-
-  @include desktop {
-    padding: 0 $desktop-padding;
-  }
-
-  &__logo {
-    display: block;
-    width: fit-content;
-    height: 19px;
-    margin: 5vw auto 5vw;
-
-    @include tablet {
-      margin: 0;
-      margin-right: 3.125vw;
-    } 
-
-    @include desktop {
-      margin-right: 56px;
-    }
-  }
-
-  &__links {
-    display: flex;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-
-    box-sizing: content-box;
-
-    @include tablet {
-      width: fit-content;
-      margin-left: 24px;
-      margin-right: 24px;
-
-      padding: 0 10px;
-    }
-
-    @include desktop {
-      width: 80px;
-      margin-left: 0;
-      margin-right: 56px;
-      padding: 0;
-    }
-
-    & > div {
-      @include tablet {
-        display: flex;
-        align-items: flex-end;
-        height: 32px;
-      }
-    }
-
-    a {
-      color: $white;
-      opacity: 0.7;
-      
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    &--selected {
-      border-bottom: 4px solid $white;
-
-      a {
-        opacity: 1;
-      }
-    }
-
-    
-  }
-}
-
 .hero {
   background-image: url(../assets/Images/hero.jpg);
   background-position: center;
@@ -208,7 +52,6 @@ main {
       padding: 0 $desktop-padding;
     }
   }
-
 }
 
 .about {
@@ -255,7 +98,6 @@ main {
     @include desktop {
       margin: 48px auto 40px;
       width: 56.875vw;
-      
     }
   }
 
@@ -268,7 +110,7 @@ main {
       font-size: 16px;
     }
 
-    @include desktop {    
+    @include desktop {
       width: 56.875vw;
       margin: auto;
       margin-bottom: 56px;
@@ -304,23 +146,22 @@ main {
   &__artical {
     font-weight: 400;
     font-size: 12px;
-    line-height: 18px;  
+    line-height: 18px;
 
     @include tablet {
       display: flex;
-    
+
       font-size: 14px;
       line-height: 22px;
     }
   }
 
-  &__paragraph{
+  &__paragraph {
     margin-top: 0;
 
     @include desktop {
       width: 32.8125vw;
     }
-    
 
     &:first-child {
       @include tablet {
@@ -329,7 +170,6 @@ main {
       }
 
       @include desktop {
-        
         margin-right: 40px;
       }
     }
@@ -366,7 +206,7 @@ main {
       justify-content: space-between;
     }
 
-    &:nth-last-child(-n+3) {
+    &:nth-last-child(-n + 3) {
       @include desktop {
         margin-bottom: 0;
       }
@@ -394,7 +234,7 @@ main {
         margin-bottom: 1.875vw;
       }
 
-      &:nth-last-child(-n+3) {
+      &:nth-last-child(-n + 3) {
         @include desktop {
           margin-bottom: 0;
         }
@@ -408,7 +248,7 @@ footer {
   background-color: $black;
   color: $white;
   padding-bottom: 54px;
-  
+
   & > * {
     @include tablet {
       margin: 0 $tablet-padding;
@@ -416,10 +256,7 @@ footer {
   }
 }
 
-
-
 .social {
-
   @include tablet {
     display: flex;
     align-items: center;
@@ -429,10 +266,10 @@ footer {
   }
 
   &--left {
-    @include tablet{
+    @include tablet {
       display: flex;
       align-items: center;
-    } 
+    }
   }
 
   @include desktop {
@@ -477,10 +314,10 @@ footer {
 
     @include tablet {
       height: fit-content;
-       & > li {
-         display: flex;
-         align-items: flex-end;
-       }
+      & > li {
+        display: flex;
+        align-items: flex-end;
+      }
     }
 
     @include desktop {
@@ -521,7 +358,7 @@ footer {
   &__group {
     @include tablet {
       width: 29.17vw;
-      
+
       &:nth-child(2) {
         margin: 0 3.125vw;
       }
