@@ -8,7 +8,7 @@
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(50, 50, 50, 0.5);
 
-  width: 100vw;
+  width: 100%;
   height: 183px;
   margin: 0;
 
@@ -243,192 +243,180 @@ main {
   }
 }
 
-// footer sction
-footer {
-  background-color: $black;
-  color: $white;
-  padding-bottom: 54px;
+.comment {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 
-  & > * {
-    @include tablet {
-      margin: 0 $tablet-padding;
-    }
-  }
-}
-
-.social {
   @include tablet {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 48px;
-    margin-bottom: 48px;
-  }
-
-  &--left {
-    @include tablet {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  @include desktop {
-    margin-left: $desktop-padding;
-    margin-right: $desktop-padding;
-    margin-bottom: 54px;
+    margin-top: 3rem;
   }
 
   &__title {
-    font-weight: bold;
-    font-size: 36px;
-    margin-left: 10px;
+    font-size: 1.5rem;
+    line-height: 32px;
     margin-top: 0;
-    padding-top: 40px;
+    margin-bottom: 2.5rem;
 
     @include tablet {
-      margin-left: 0;
-      margin-bottom: 0;
-      padding-top: 0;
-    }
-
-    @include desktop {
-      width: 21.5625vw;
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 56px;
     }
   }
 
-  &__icons {
+  &__content {
     display: flex;
-    padding-left: 5vw;
-    margin-top: 0;
-    margin-bottom: 32px;
+    flex-direction: column;
 
     @include tablet {
-      margin-bottom: 0;
-      padding-left: 54px;
+      width: 67.71vw;
+      max-width: 528px;
+      margin: 0 auto;
     }
   }
 
-  &__icon {
-    margin-right: 34px;
-    width: fit-content;
-
-    @include tablet {
-      height: fit-content;
-      & > li {
-        display: flex;
-        align-items: flex-end;
-      }
-    }
-
-    @include desktop {
-      margin-right: 32px;
-    }
+  &__profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center left;
+    position: relative;
   }
 
-  &__logo {
-    display: none;
-
-    @include tablet {
-      display: block;
-      height: 20px;
-    }
-
-    @include desktop {
-      height: 24px;
-    }
-  }
-}
-
-.contact {
-  margin-left: 3.125vw;
-
-  @include tablet {
+  &__input {
     display: flex;
-  }
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid $mercury;
 
-  @include desktop {
-    margin-left: $desktop-padding;
-    margin-right: $desktop-padding;
-  }
-
-  a {
-    color: $white;
-  }
-
-  &__group {
-    @include tablet {
-      width: 29.17vw;
-
-      &:nth-child(2) {
-        margin: 0 3.125vw;
-      }
+    &--photo {
+      width: 3rem;
+      height: 3rem;
+      top: 1.75rem;
     }
   }
 
-  &__name {
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 5vw;
-    line-height: 20px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    width: 70vw;
+    max-width: 70vw;
 
     @include tablet {
-      margin-bottom: 24px;
-      font-size: 16px;
-    }
-  }
-
-  &__address,
-  &__email,
-  &__copyright {
-    font-weight: 300;
-    line-height: 18px;
-
-    @include tablet {
-      font-size: 14px;
-    }
-  }
-
-  &__address {
-    margin-top: 0;
-    margin-bottom: 5vw;
-    margin-bottom: 32px;
-
-    @include desktop {
-      margin-bottom: 24px;
-    }
-  }
-
-  &__email {
-    margin-top: 0;
-    margin-bottom: 7.5vw;
-
-    @include tablet {
-      margin-bottom: 32px;
+      margin-left: 20px;
     }
 
-    @include desktop {
-      margin-bottom: 40px;
-    }
-  }
-
-  &__copyright {
-    margin-top: 10vw;
-    margin-bottom: 0;
-    margin-left: 3.125vw;
-
-    @include tablet {
-      margin-top: 0;
+    &--label {
+      color: $silcer;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
     }
 
-    @include desktop {
-      margin-left: $desktop-padding;
-      margin-right: $desktop-padding;
-    }
+    &--name,
+    &--description {
+      background-color: $alabaster;
+      border: 2px solid $mercury;
+      border-radius: 4px;
+      vertical-align: text-top;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
 
-    & > br {
+      font-family: inherit;
+      font-size: inherit;
+      color: black;
+
+      box-sizing: border-box;
+
       @include tablet {
-        display: none;
+        margin-bottom: 24px;
       }
+
+      &:focus {
+        border: 3px solid $black;
+      }
+    }
+
+    &--name {
+      height: 48px;
+    }
+
+    &--description {
+      height: 96px;
+      padding-top: 0.75rem;
+      resize: none;
+    }
+
+    &--submit {
+      height: 48px;
+
+      @include tablet {
+        width: 10rem;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    border-bottom: 2px solid $mercury;
+
+    &--left {
+      background-color: $mercury;
+      width: 40px;
+      height: 40px;
+    }
+
+    &--right {
+      font-size: 14px;
+      margin-left: 1rem;
+      width: 100%;
+      @include tablet {
+      }
+    }
+
+    &--title {
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet {
+        justify-content: flex-start;
+      }
+    }
+
+    &--name,
+    &--description {
+      overflow-wrap: break-word;
+    }
+
+    &--name {
+      margin: 0;
+    }
+
+    &--date {
+      margin: 0;
+      color: silver;
+      font-weight: 400;
+
+      @include tablet {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &--description {
+      // width: 73.125vw;
+      width: 100%;
+      // width: 95.83;
+      margin: 16px 0 24px 0;
     }
   }
 }

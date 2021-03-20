@@ -43,7 +43,7 @@
   background-position: center;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(50, 50, 50, 0.5);
-  width: 100vw;
+  width: 100%;
   height: 183px;
   margin: 0;
   display: flex;
@@ -282,195 +282,160 @@ main > * {
   }
 }
 
-footer {
-  background-color: #323232;
-  color: #ffffff;
-  padding-bottom: 54px;
+.comment {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 768px) {
-  footer > * {
-    margin: 0 3.125vw;
+  .comment {
+    margin-top: 3rem;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .social {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 48px;
-    margin-bottom: 48px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .social--left {
-    display: flex;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .social {
-    margin-left: 14.0625vw;
-    margin-right: 14.0625vw;
-    margin-bottom: 54px;
-  }
-}
-.social__title {
-  font-weight: bold;
-  font-size: 36px;
-  margin-left: 10px;
+.comment__title {
+  font-size: 1.5rem;
+  line-height: 32px;
   margin-top: 0;
-  padding-top: 40px;
+  margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 768px) {
-  .social__title {
-    margin-left: 0;
-    margin-bottom: 0;
-    padding-top: 0;
+  .comment__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 56px;
   }
 }
-@media screen and (min-width: 1280px) {
-  .social__title {
-    width: 21.5625vw;
-  }
-}
-.social__icons {
+.comment__content {
   display: flex;
-  padding-left: 5vw;
-  margin-top: 0;
-  margin-bottom: 32px;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .social__icons {
-    margin-bottom: 0;
-    padding-left: 54px;
+  .comment__content {
+    width: 67.71vw;
+    max-width: 528px;
+    margin: 0 auto;
   }
 }
-.social__icon {
-  margin-right: 34px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.comment__profile-pic {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center left;
+     object-position: center left;
+  position: relative;
+}
+.comment__input {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+.comment__input--photo {
+  width: 3rem;
+  height: 3rem;
+  top: 1.75rem;
+}
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  max-width: 70vw;
 }
 @media screen and (min-width: 768px) {
-  .social__icon {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .social__icon > li {
-    display: flex;
-    align-items: flex-end;
+  .comment__form {
+    margin-left: 20px;
   }
 }
-@media screen and (min-width: 1280px) {
-  .social__icon {
-    margin-right: 32px;
-  }
-}
-.social__logo {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .social__logo {
-    display: block;
-    height: 20px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .social__logo {
-    height: 24px;
-  }
-}
-
-.contact {
-  margin-left: 3.125vw;
-}
-@media screen and (min-width: 768px) {
-  .contact {
-    display: flex;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .contact {
-    margin-left: 14.0625vw;
-    margin-right: 14.0625vw;
-  }
-}
-.contact a {
-  color: #ffffff;
-}
-@media screen and (min-width: 768px) {
-  .contact__group {
-    width: 29.17vw;
-  }
-  .contact__group:nth-child(2) {
-    margin: 0 3.125vw;
-  }
-}
-.contact__name {
+.comment__form--label {
+  color: #afafaf;
+  font-size: 1rem;
   font-weight: 500;
-  margin-top: 0;
-  margin-bottom: 5vw;
-  line-height: 20px;
+  margin-bottom: 0.5rem;
+}
+.comment__form--name, .comment__form--description {
+  background-color: #fafafa;
+  border: 2px solid #e1e1e1;
+  border-radius: 4px;
+  vertical-align: text-top;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: black;
+  box-sizing: border-box;
 }
 @media screen and (min-width: 768px) {
-  .contact__name {
-    margin-bottom: 24px;
-    font-size: 16px;
-  }
-}
-.contact__address, .contact__email, .contact__copyright {
-  font-weight: 300;
-  line-height: 18px;
-}
-@media screen and (min-width: 768px) {
-  .contact__address, .contact__email, .contact__copyright {
-    font-size: 14px;
-  }
-}
-.contact__address {
-  margin-top: 0;
-  margin-bottom: 5vw;
-  margin-bottom: 32px;
-}
-@media screen and (min-width: 1280px) {
-  .contact__address {
+  .comment__form--name, .comment__form--description {
     margin-bottom: 24px;
   }
 }
-.contact__email {
-  margin-top: 0;
-  margin-bottom: 7.5vw;
+.comment__form--name:focus, .comment__form--description:focus {
+  border: 3px solid #323232;
+}
+.comment__form--name {
+  height: 48px;
+}
+.comment__form--description {
+  height: 96px;
+  padding-top: 0.75rem;
+  resize: none;
+}
+.comment__form--submit {
+  height: 48px;
 }
 @media screen and (min-width: 768px) {
-  .contact__email {
-    margin-bottom: 32px;
+  .comment__form--submit {
+    width: 10rem;
+    align-self: flex-end;
   }
 }
-@media screen and (min-width: 1280px) {
-  .contact__email {
-    margin-bottom: 40px;
-  }
+.comment__list {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-left: 0;
+  margin: 0;
 }
-.contact__copyright {
-  margin-top: 10vw;
-  margin-bottom: 0;
-  margin-left: 3.125vw;
+.comment__item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  border-bottom: 2px solid #e1e1e1;
+}
+.comment__item--left {
+  background-color: #e1e1e1;
+  width: 40px;
+  height: 40px;
+}
+.comment__item--right {
+  font-size: 14px;
+  margin-left: 1rem;
+  width: 100%;
+}
+.comment__item--title {
+  display: flex;
+  justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
-  .contact__copyright {
-    margin-top: 0;
+  .comment__item--title {
+    justify-content: flex-start;
   }
 }
-@media screen and (min-width: 1280px) {
-  .contact__copyright {
-    margin-left: 14.0625vw;
-    margin-right: 14.0625vw;
-  }
+.comment__item--name, .comment__item--description {
+  overflow-wrap: break-word;
+}
+.comment__item--name {
+  margin: 0;
+}
+.comment__item--date {
+  margin: 0;
+  color: silver;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
-  .contact__copyright > br {
-    display: none;
+  .comment__item--date {
+    margin-left: 0.5rem;
   }
+}
+.comment__item--description {
+  width: 100%;
+  margin: 16px 0 24px 0;
 }/*# sourceMappingURL=main.css.map */

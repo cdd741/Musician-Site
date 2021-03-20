@@ -115,28 +115,36 @@
       </div>
 
       <div class="comment">
-        <h1 class="comment__title">Join the Conversation</h1>
-        <div class="comment__input">
-          <img class="comment__input--photo" src="" alt="user-pic" />
-          <form class="comment__form">
-            <label class="comment__input--label" for="name">NAME</label>
-            <input class="comment__input--name" type="text" name="name" />
-            <label class="comment__input--label" for="description">
-              COMMENT
-            </label>
-            <input
-              class="comment__input--description"
-              type="text"
-              name="description"
+        <h2 class="comment__title">Join the Conversation</h2>
+        <div class="comment__content">
+          <div class="comment__input">
+            <img
+              class="comment__input--photo comment__profile-pic"
+              src="./assets/Images/Mohan-muruge.jpg"
+              alt="profile-picture"
             />
-            <input
-              class="comment__input--submit"
-              type="submit"
-              value="COMMENT"
-            />
-          </form>
+            <form class="comment__form">
+              <label class="comment__form--label" for="name">NAME</label>
+              <input
+                class="comment__form--name"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+              />
+              <label class="comment__form--label" for="description">
+                COMMENT
+              </label>
+              <textarea
+                class="comment__form--description"
+                type="text"
+                name="description"
+                placeholder="Add a new comment"
+              ></textarea>
+              <button class="comment__form--submit">COMMENT</button>
+            </form>
+          </div>
+          <ul class="comment__list"></ul>
         </div>
-        <ul class="comment__list"></ul>
       </div>
     </main>
 
