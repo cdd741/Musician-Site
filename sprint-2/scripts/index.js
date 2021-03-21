@@ -1,3 +1,4 @@
+let comments = [];
 // create Comment object model using constructor function
 function Comment(name, date, description, img) {
   this.name = name;
@@ -28,7 +29,7 @@ const dateTag = newElement("h4", ["comment__item--date"]);
 const descriptionTag = newElement("p", ["comment__item--description"]);
 
 // aquire a new Comment object and insert into document
-function newComment(comment) {
+function displayComment(comment) {
   let nameBlock = nameTag(comment.name);
   let dateBlock = dateTag(comment.date);
   let titleBlock = titleTag();
@@ -47,6 +48,12 @@ function newComment(comment) {
   insertBlock(commentList, [liBlock]);
 }
 
+function newCommentList(commentList) {
+  commentList.forEach((comment) => {
+    displayComment(comment);
+  });
+}
+
 //////////////// event handling ////////////////
 // global variables
 const form = document.querySelector(".comment__form");
@@ -56,13 +63,25 @@ const descriptionField = document.querySelector(".comment__form--description");
 // comment onSubmit event handling, create a new Comment object and
 function handleOnSubmit(e) {
   e.preventDefault();
+
+  // get input info and date for comment
   const name = e.target.name.value;
   const description = e.target.description.value;
   const date = getDate();
-  console.log(typeof description);
   const img = "./assets/Images/Mohan-muruge.jpg";
+
+  // reset input field
+  const inputName = document.querySelector(".comment__form--name");
+  const inputDescripstion = document.querySelector(
+    ".comment__form--description"
+  );
+  inputName.value = "";
+  inputDescripstion.value = "";
+
+  // construct comment object and create new comment block
   const comment = new Comment(name, date, description, img);
-  newComment(comment);
+  comments.push(comment);
+  newCommentList(comments);
 }
 
 // add event listener on form, will be trigered by clicking submit button
@@ -73,7 +92,9 @@ form.addEventListener("submit", handleOnSubmit);
 function addMockdata() {
   // comment one
   const name1 = "Theodore Duncan";
-  const date1 = "11/15/2018";
+  // const date1 = "11/15/2018";
+  let date1 = new Date("Nov 15 2018");
+  date1 = date1.toLocaleDateString();
   const description1 =
     "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!";
   const img1 =
@@ -82,7 +103,9 @@ function addMockdata() {
 
   // comment two
   const name2 = "Gary Wong";
-  const date2 = "12/12/2018";
+  // const date2 = "12/12/2018";
+  let date2 = new Date("Dev 12 2018");
+  date2 = date2.toLocaleDateString();
   const description2 =
     "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!";
   const img2 =
@@ -91,7 +114,10 @@ function addMockdata() {
 
   // comment three
   const name3 = "Micheal Lyons";
-  const date3 = "12/18/2018";
+  // const date3 = "12/18/2018";
+  let date3 = new Date("Dec 18 2018");
+  date3 = date3.toLocaleDateString();
+
   const description3 =
     "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.";
   const img3 =
@@ -99,12 +125,13 @@ function addMockdata() {
   const comment3 = new Comment(name3, date3, description3, img3);
 
   // create array for stroing comment objects
-  const comments = [comment1, comment2, comment3];
+  comments = [comment1, comment2, comment3];
 
   // render mockup comments into html
-  for (let i = 0; i < comments.length; ++i) {
-    newComment(comments[i]);
-  }
+  // for (let i = 0; i < comments.length; ++i) {
+  //   displayComment()(comments[i]);
+  // }
+  newCommentList(comments);
 }
 
 // execut mocking function
