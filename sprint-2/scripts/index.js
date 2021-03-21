@@ -60,22 +60,20 @@ const titleTag = newElement("div", ["comment__item--title"]);
 const nameTag = newElement("h4", ["comment__item--name"]);
 const dateTag = newElement("h4", ["comment__item--date"]);
 const descriptionTag = newElement("p", ["comment__item--description"]);
-const timePassedTag = newElement("h5", ["comment__item--time-passed"]);
 
 const commentList = document.querySelector(".comment__list");
 
 // aquire a new Comment object and insert into document
 function displayComment(comment) {
   const nameBlock = nameTag(comment.name);
-  const dateBlock = dateTag(comment.date.toLocaleDateString());
   const timePassed = getTimePassed(comment.date);
-  const timePassedBlock = timePassedTag(timePassed);
+  const dateBlock = dateTag(timePassed);
   const titleBlock = titleTag();
   insertBlock(titleBlock, [nameBlock, dateBlock]);
 
   const descriptionBlock = descriptionTag(comment.description);
   const contentBlock = contentTag();
-  insertBlock(contentBlock, [titleBlock, descriptionBlock, timePassedBlock]);
+  insertBlock(contentBlock, [titleBlock, descriptionBlock]);
 
   const imgBlock = imgTag();
   imgBlock.src = comment.img;
