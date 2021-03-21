@@ -1,5 +1,5 @@
 // create an array for stroing comment objects
-let comments = [];
+const comments = [];
 
 // create Comment object model using constructor function
 function Comment(name, date, description, img) {
@@ -154,7 +154,7 @@ function addMockdata() {
   const comment3 = new Comment(name3, date3, description3, img3);
 
   // create array for stroing comment objects
-  comments = [comment1, comment2, comment3];
+  comments.push(comment1, comment2, comment3);
   newCommentList(comments);
 }
 
