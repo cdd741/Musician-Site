@@ -28,23 +28,24 @@ const nameTag = newElement("h4", ["comment__item--name"]);
 const dateTag = newElement("h4", ["comment__item--date"]);
 const descriptionTag = newElement("p", ["comment__item--description"]);
 
+const commentList = document.querySelector(".comment__list");
+
 // aquire a new Comment object and insert into document
 function displayComment(comment) {
-  let nameBlock = nameTag(comment.name);
-  let dateBlock = dateTag(comment.date);
-  let titleBlock = titleTag();
+  const nameBlock = nameTag(comment.name);
+  const dateBlock = dateTag(comment.date);
+  const titleBlock = titleTag();
   insertBlock(titleBlock, [nameBlock, dateBlock]);
 
-  let descriptionBlock = descriptionTag(comment.description);
-  let contentBlock = contentTag();
+  const descriptionBlock = descriptionTag(comment.description);
+  const contentBlock = contentTag();
   insertBlock(contentBlock, [titleBlock, descriptionBlock]);
 
-  let imgBlock = imgTag();
+  const imgBlock = imgTag();
   imgBlock.src = comment.img;
-  let liBlock = liTag();
+  const liBlock = liTag();
   insertBlock(liBlock, [imgBlock, contentBlock]);
 
-  let commentList = document.querySelector(".comment__list");
   insertBlock(commentList, [liBlock]);
 }
 
@@ -81,6 +82,7 @@ function handleOnSubmit(e) {
   // construct comment object and create new comment block
   const comment = new Comment(name, date, description, img);
   comments.push(comment);
+  commentList.innerHTML = "";
   newCommentList(comments);
 }
 
@@ -104,7 +106,7 @@ function addMockdata() {
   // comment two
   const name2 = "Gary Wong";
   // const date2 = "12/12/2018";
-  let date2 = new Date("Dev 12 2018");
+  let date2 = new Date("Dec 12 2018");
   date2 = date2.toLocaleDateString();
   const description2 =
     "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!";
