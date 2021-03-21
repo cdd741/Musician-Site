@@ -15,23 +15,6 @@ function getDate() {
 
 //////// create comment rendereing function ////////
 
-// create a empty element and returns a function that aquire a variable to fill the content
-function newElement(tag, classNames) {
-  return (content = "") => {
-    let element = document.createElement(tag);
-    element.classList.add(...classNames);
-    if (content) element.innerText = content;
-    return element;
-  };
-}
-
-// append children element (array of child elements) into parent element
-function insertBlock(parent, children) {
-  for (let i = 0; i < children.length; ++i) {
-    parent.appendChild(children[i]);
-  }
-}
-
 // make reusable functions for creat
 const liTag = newElement("li", ["comment__item"]);
 const imgTag = newElement("img", [

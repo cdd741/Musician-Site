@@ -1,0 +1,32 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/typography' as *;
+
+.hero {
+  background-image: url(../assets/Images/showsHero.jfif);
+  display: flex;
+  flex-direction: column;
+
+  &__main-title {
+    font-size: 36px;
+    height: fit-content;
+    margin-top: 0;
+    margin-bottom: 7.5vw;
+    line-height: 48px;
+
+    @include tablet {
+      margin-top: 56px;
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__music {
+    margin: $mobile-padding;
+    width: 90%;
+  }
+}
