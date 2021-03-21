@@ -271,8 +271,8 @@
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center left;
-     object-position: center left;
+  -o-object-position: left;
+     object-position: left;
   position: relative;
 }
 .comment__input {
@@ -350,6 +350,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 2px solid #e1e1e1;
 }
 .comment__item--left {
@@ -379,7 +380,7 @@
 }
 .comment__item--date {
   margin: 0;
-  color: silver;
+  color: #afafaf;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
@@ -389,5 +390,11 @@
 }
 .comment__item--description {
   width: 100%;
-  margin: 1rem 0 1.5rem 0;
+  margin: 1rem 0 0;
+}
+.comment__item--time-passed {
+  color: #afafaf;
+  margin: 0;
+  margin-top: 0.5rem;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */
