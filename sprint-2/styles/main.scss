@@ -6,21 +6,6 @@
   background-image: url(../assets/Images/hero.jpg);
 }
 
-// main section
-main {
-  & > * {
-    padding: 0 $mobile-padding;
-
-    @include tablet {
-      padding: 0 $tablet-padding;
-    }
-
-    @include desktop {
-      padding: 0 $desktop-padding;
-    }
-  }
-}
-
 .about {
   font-weight: 600;
 
@@ -220,14 +205,14 @@ main {
 
   &__title {
     font-size: 1.5rem;
-    line-height: 32px;
+    line-height: 2rem;
     margin-top: 0;
     margin-bottom: 2.5rem;
 
     @include tablet {
-      font-size: 36px;
-      line-height: 44px;
-      margin-bottom: 56px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      margin-bottom: 3.5rem;
     }
   }
 
@@ -270,7 +255,7 @@ main {
     max-width: 70vw;
 
     @include tablet {
-      margin-left: 20px;
+      margin-left: 1.25rem;
     }
 
     &--label {
@@ -296,7 +281,7 @@ main {
       box-sizing: border-box;
 
       @include tablet {
-        margin-bottom: 24px;
+        margin-bottom: 1.25rem;
       }
 
       &:focus {
@@ -305,17 +290,17 @@ main {
     }
 
     &--name {
-      height: 48px;
+      height: 3rem;
     }
 
     &--description {
-      height: 96px;
+      height: 6rem;
       padding-top: 0.75rem;
       resize: none;
     }
 
     &--submit {
-      height: 48px;
+      height: 3rem;
 
       @include tablet {
         width: 10rem;
@@ -334,17 +319,17 @@ main {
   &__item {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    margin-top: 1.5rem;
     border-bottom: 2px solid $mercury;
 
     &--left {
       background-color: $mercury;
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     &--right {
-      font-size: 14px;
+      font-size: 0.875rem;
       margin-left: 1rem;
       width: 100%;
       @include tablet {
@@ -383,7 +368,7 @@ main {
       // width: 73.125vw;
       width: 100%;
       // width: 95.83;
-      margin: 16px 0 24px 0;
+      margin: 1rem 0 1.5rem 0;
     }
   }
 }

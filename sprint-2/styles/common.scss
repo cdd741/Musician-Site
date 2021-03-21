@@ -61,6 +61,7 @@ a {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 button {
@@ -73,6 +74,21 @@ button {
 
   &:hover {
     background-color: black;
+  }
+}
+
+// main section
+main {
+  & > * {
+    padding: 0 $mobile-padding;
+
+    @include tablet {
+      padding: 0 $tablet-padding;
+    }
+
+    @include desktop {
+      padding: 0 $desktop-padding;
+    }
   }
 }
 

@@ -101,6 +101,7 @@ a {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 button {
@@ -113,6 +114,20 @@ button {
 }
 button:hover {
   background-color: black;
+}
+
+main > * {
+  padding: 0 5vw;
+}
+@media screen and (min-width: 768px) {
+  main > * {
+    padding: 0 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  main > * {
+    padding: 0 14.0625vw;
+  }
 }
 
 .navBar {

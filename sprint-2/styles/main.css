@@ -42,20 +42,6 @@
   background-image: url(../assets/Images/hero.jpg);
 }
 
-main > * {
-  padding: 0 5vw;
-}
-@media screen and (min-width: 768px) {
-  main > * {
-    padding: 0 3.125vw;
-  }
-}
-@media screen and (min-width: 1280px) {
-  main > * {
-    padding: 0 14.0625vw;
-  }
-}
-
 .about {
   font-weight: 600;
 }
@@ -259,15 +245,15 @@ main > * {
 }
 .comment__title {
   font-size: 1.5rem;
-  line-height: 32px;
+  line-height: 2rem;
   margin-top: 0;
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .comment__title {
-    font-size: 36px;
-    line-height: 44px;
-    margin-bottom: 56px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 3.5rem;
   }
 }
 .comment__content {
@@ -308,7 +294,7 @@ main > * {
 }
 @media screen and (min-width: 768px) {
   .comment__form {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 }
 .comment__form--label {
@@ -331,22 +317,22 @@ main > * {
 }
 @media screen and (min-width: 768px) {
   .comment__form--name, .comment__form--description {
-    margin-bottom: 24px;
+    margin-bottom: 1.25rem;
   }
 }
 .comment__form--name:focus, .comment__form--description:focus {
   border: 3px solid #323232;
 }
 .comment__form--name {
-  height: 48px;
+  height: 3rem;
 }
 .comment__form--description {
-  height: 96px;
+  height: 6rem;
   padding-top: 0.75rem;
   resize: none;
 }
 .comment__form--submit {
-  height: 48px;
+  height: 3rem;
 }
 @media screen and (min-width: 768px) {
   .comment__form--submit {
@@ -363,16 +349,16 @@ main > * {
 .comment__item {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: 1.5rem;
   border-bottom: 2px solid #e1e1e1;
 }
 .comment__item--left {
   background-color: #e1e1e1;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .comment__item--right {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 1rem;
   width: 100%;
 }
@@ -403,5 +389,5 @@ main > * {
 }
 .comment__item--description {
   width: 100%;
-  margin: 16px 0 24px 0;
+  margin: 1rem 0 1.5rem 0;
 }/*# sourceMappingURL=main.css.map */

@@ -4,28 +4,31 @@ function Show(date, venue, location) {
   this.location = location;
 }
 
-const showList = document.querySelector(".shows");
+const showList = document.querySelector(".shows__list");
 
-const showTag = newElement("div", ["show"]);
-const wrapper = newElement("div", ["wrapper"]);
-const labelTag = newElement("li", ["label"]);
-const dateTag = newElement("h4", ["date"]);
-const venueTag = newElement("h4", ["venue"]);
-const locationTag = newElement("h4", ["location"]);
-const buyTag = newElement("button", ["but-tickets"]);
+const showTag = newElement("div", ["shows__show"]);
+const wrapper = newElement("div", ["shows__wrapper"]);
+const labelTag = newElement("li", ["shows__label"]);
+const dateTag = newElement("h4", ["shows__date"]);
+const venueTag = newElement("h4", ["shows__venue"]);
+const locationTag = newElement("h4", ["shows__location"]);
+const buyTag = newElement("button", ["shows__buy-Button"]);
 
 function newShow(show) {
   const dateLabel = labelTag("DATE");
+  dateLabel.classList.add("show__label--date");
   const dateBlock = dateTag(show.date);
   const dateWrapper = wrapper();
   insertBlock(dateWrapper, [dateLabel, dateBlock]);
 
   const venueLabel = labelTag("VENUE");
+  venueLabel.classList.add("show__label--venue");
   const venueBlock = venueTag(show.venue);
   const venueWrapper = wrapper();
   insertBlock(venueWrapper, [venueLabel, venueBlock]);
 
   const locationLabel = labelTag("LOCATION");
+  locationLabel.classList.add("show__label--location");
   const locationBlock = locationTag(show.location);
   const locationWrapper = wrapper();
   insertBlock(locationWrapper, [locationLabel, locationBlock]);
