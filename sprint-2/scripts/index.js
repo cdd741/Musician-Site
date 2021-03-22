@@ -105,11 +105,17 @@ function handleOnSubmit(e) {
   const date = getDate();
   const img = "./assets/Images/Mohan-muruge.jpg";
 
+  if (!name || !description) {
+    alert("Please Fill All Required Field");
+    return;
+  }
+
   // reset input field
   const inputName = document.querySelector(".comment__form--name");
   const inputDescripstion = document.querySelector(
     ".comment__form--description"
   );
+
   inputName.value = "";
   inputDescripstion.value = "";
 
