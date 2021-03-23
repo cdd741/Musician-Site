@@ -1,0 +1,237 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/typography' as *;
+
+.hero {
+  background-image: url(../assets/Images/showsHero.jfif);
+  display: flex;
+  align-items: flex-start;
+
+  @include tablet {
+    height: 670px;
+    max-height: 670px;
+    min-height: min-content;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 64px;
+
+    @include tablet {
+      margin-top: 6rem;
+    }
+    @include desktop {
+      margin-top: 10rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include tablet {
+      width: 77.6vw;
+    }
+
+    @include desktop {
+      width: calc(40vw - 4rem);
+    }
+
+    &--sub {
+      margin: 0;
+      font-weight: 500;
+
+      @include tablet {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+
+    &--main {
+      font-size: 2.25rem;
+      height: fit-content;
+      margin-top: 0;
+      margin-bottom: 4rem;
+      line-height: 3rem;
+
+      @include tablet {
+        margin-top: 3.5rem;
+        margin-bottom: 2.5rem;
+        font-size: 3.75rem;
+        line-height: 4rem;
+      }
+
+      @include desktop {
+        margin-top: 3rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__music {
+    // overflow: hidden;
+    height: 150px;
+  }
+
+  &__iframe {
+    width: 167%;
+    height: 110%;
+    transform: scale(0.6);
+    transform-origin: 0 0;
+    border-radius: 5px;
+
+    @include tablet {
+      width: 436px * 1.1;
+      height: 146px * 1.1;
+      transform: scale(0.91);
+    }
+
+    @include desktop {
+      width: 436px;
+      height: 146px;
+      transform: scale(1);
+    }
+  }
+}
+
+.shows {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+    }
+  }
+
+  &__schedule {
+    @include desktop {
+      max-width: 55.85vw;
+      // justify-self: flex-end;
+    }
+  }
+
+  &__headers {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__header {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $silcer;
+  }
+
+  &__list {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__show {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $mercury;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+  }
+
+  &__wrapper {
+    height: fit-content;
+    max-width: 714px;
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $silcer;
+    margin: 1.5rem 0 1rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__date,
+  &__venue,
+  &__location {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+
+  &__header--date,
+  &__date {
+    @include tablet {
+      width: 29.17vw;
+    }
+
+    @include desktop {
+      width: 19.17vw;
+    }
+  }
+
+  &__header--venue,
+  &__header--location,
+  &__venue,
+  &__location {
+    @include tablet {
+      width: 19.27vw;
+    }
+
+    @include desktop {
+      width: 12.78vw;
+    }
+  }
+
+  &__date {
+    font-weight: 600;
+  }
+
+  &__venue {
+    font-weight: 400;
+  }
+
+  &__location {
+    font-weight: 400;
+  }
+
+  &__buy-Button {
+    height: 3rem;
+    width: 100%;
+    margin-top: 2rem;
+
+    @include tablet {
+      width: 10rem;
+      margin-top: 0;
+      margin-left: calc(26.04vw - 10rem);
+    }
+
+    @include desktop {
+      margin-left: calc(11.11vw - 10rem);
+    }
+  }
+}
