@@ -17,7 +17,6 @@ const timeUnits = [year, month, week, day, hour, minut, second];
 
 function getTimePassed(date) {
   let timeNow = new Date().getTime();
-  // let timeThen = date.getTime();
   let timeThen = date;
   let timeDiff = timeNow - timeThen;
   timeDiff = Math.round(timeDiff / 1000);
@@ -96,57 +95,6 @@ function newCommentList(comments) {
   });
 }
 
-// Api calls
-// GET
-function getComments() {
-  axios
-    .get(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`)
-    .then((res) => {
-      newCommentList(res.data);
-    })
-    .catch((err) => console.log(err));
-}
-
-// POST
-function postComments(name, comment) {
-  axios
-    .post(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`, {
-      name: name,
-      comment: comment,
-    })
-    .then(() => {
-      getComments();
-    })
-    .catch((err) => console.log(err));
-}
-
-// PUT
-function likeComment(id) {
-  axios
-    .put(
-      `https://project-1-api.herokuapp.com/comments/${id}/like?api_key=<${apiKey}>`
-    )
-    .then(() => {
-      getComments();
-    })
-    .catch((err) => console.log(err));
-}
-
-//DELETE
-function deleteComment(id) {
-  axios
-    .delete(
-      `https://project-1-api.herokuapp.com/comments/${id}?api_key=<${apiKey}>`
-    )
-    .then(() => {
-      getComments();
-    })
-    .catch((err) => console.log(err));
-}
-
-const apiKey = "5c7904ce-9fd9-4d9a-91be-11685db1d644";
-getComments();
-
 //////////////// event handling ////////////////
 // global variables
 const form = document.querySelector(".comment__form");
@@ -183,3 +131,6 @@ function handleDelete(e) {
 
 // add event listener on form, will be trigered by clicking submit button
 form.addEventListener("submit", handleOnSubmit);
+
+// call api functions from apis.js
+getComments();
