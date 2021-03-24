@@ -87,10 +87,8 @@ function displayComment(comment) {
 }
 
 function newCommentList(comments) {
-  console.log("comment refreshed");
   commentList.innerHTML = "";
   comments.forEach((comment) => {
-    console.log(comment.likes);
     displayComment(comment);
   });
 }

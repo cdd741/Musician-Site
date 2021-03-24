@@ -211,6 +211,7 @@
   display: block;
   margin-top: 0;
   margin-bottom: 5vw;
+  transition: 0.2s;
 }
 @media screen and (min-width: 768px) {
   .photos__grid img {

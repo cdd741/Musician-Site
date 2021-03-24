@@ -57,19 +57,21 @@
       font-size: 2.25rem;
       height: fit-content;
       margin-top: 0;
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
       line-height: 3rem;
 
       @include tablet {
         margin-top: 3.5rem;
         margin-bottom: 2.5rem;
         font-size: 3.75rem;
-        line-height: 4rem;
+        line-height: 5rem;
       }
 
       @include desktop {
         margin-top: 3rem;
         margin-bottom: 0;
+        position: relative;
+        top: 1.5rem;
       }
     }
   }

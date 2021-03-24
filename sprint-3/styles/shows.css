@@ -103,7 +103,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 0;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   line-height: 3rem;
 }
 @media screen and (min-width: 768px) {
@@ -111,13 +111,15 @@
     margin-top: 3.5rem;
     margin-bottom: 2.5rem;
     font-size: 3.75rem;
-    line-height: 4rem;
+    line-height: 5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title--main {
     margin-top: 3rem;
     margin-bottom: 0;
+    position: relative;
+    top: 1.5rem;
   }
 }
 .hero__music {
