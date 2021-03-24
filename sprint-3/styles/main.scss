@@ -319,9 +319,57 @@
   &__item {
     display: flex;
     justify-content: space-between;
+
     margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    // padding-bottom: 1.5rem;
     border-bottom: 2px solid $mercury;
+
+    &--lowerWrap {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &--delete-btn {
+      background-color: $white;
+      color: $silcer;
+      transition: 0.3s;
+      padding: 0;
+
+      &:hover {
+        background-color: $white;
+        color: #d11a2a;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--like-btn {
+      background-color: $white;
+      color: $black;
+      transition: 0.3s;
+      margin-right: 0.5rem;
+
+      &:hover {
+        background-color: $white;
+        color: #e31b23;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+    &--liked {
+      color: #98002e;
+
+      &:hover {
+        background-color: $white;
+        color: #e31b23;
+      }
+    }
 
     &--left {
       background-color: $mercury;
@@ -332,7 +380,7 @@
     &--right {
       font-size: 0.875rem;
       margin-left: 1rem;
-      width: 100%;
+      width: 86%;
       @include tablet {
       }
     }

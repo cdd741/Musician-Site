@@ -350,8 +350,46 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
-  padding-bottom: 1.5rem;
   border-bottom: 2px solid #e1e1e1;
+}
+.comment__item--lowerWrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.comment__item--delete-btn {
+  background-color: #ffffff;
+  color: #afafaf;
+  transition: 0.3s;
+  padding: 0;
+}
+.comment__item--delete-btn:hover {
+  background-color: #ffffff;
+  color: #d11a2a;
+}
+.comment__item--delete-btn:focus {
+  outline: none;
+}
+.comment__item--like-btn {
+  background-color: #ffffff;
+  color: #323232;
+  transition: 0.3s;
+  margin-right: 0.5rem;
+}
+.comment__item--like-btn:hover {
+  background-color: #ffffff;
+  color: #e31b23;
+}
+.comment__item--like-btn:focus {
+  outline: none;
+}
+.comment__item--liked {
+  color: #98002e;
+}
+.comment__item--liked:hover {
+  background-color: #ffffff;
+  color: #e31b23;
 }
 .comment__item--left {
   background-color: #e1e1e1;
@@ -361,7 +399,7 @@
 .comment__item--right {
   font-size: 0.875rem;
   margin-left: 1rem;
-  width: 100%;
+  width: 86%;
 }
 .comment__item--title {
   display: flex;
