@@ -262,7 +262,7 @@
 .comment__content {
   display: flex;
   flex-direction: column;
-  max-width: 51.375em;
+  max-width: 520px;
   align-self: center;
 }
 @media screen and (min-width: 768px) {
