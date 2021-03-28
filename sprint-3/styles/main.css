@@ -1,45 +1,38 @@
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Bold.otf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Demi.otf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Medium.otf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Regular.otf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Light.otf");
   font-weight: 300;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
-  font-weight: 100;
 }
 .hero {
   background-image: url(../assets/Images/hero.jpg);
+}
+.hero__title {
+  width: 15rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 37rem;
+  }
 }
 
 .about {
@@ -51,18 +44,21 @@
   height: fit-content;
   margin-top: 10vw;
   margin-bottom: 7.5vw;
-  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    margin-top: 56px;
-    margin-bottom: 40px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__title {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 .about__image {
@@ -77,76 +73,76 @@
 }
 .about__quote {
   margin-top: 7.5vw;
-  margin-bottom: 32px;
-  line-height: 24px;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .about__quote {
     font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__quote {
-    margin: 48px auto 40px;
+    margin: 3rem auto 2.5rem;
     width: 56.875vw;
   }
 }
 .about__person {
   margin-top: 0;
-  margin-bottom: 48px;
-  font-size: 14px;
+  margin-bottom: 3rem;
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 768px) {
   .about__person {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__person {
     width: 56.875vw;
     margin: auto;
-    margin-bottom: 56px;
+    margin-bottom: 3.5rem;
   }
 }
 
 .content {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 1280px) {
   .content {
     width: 56.875vw;
-    margin: 0 auto 48px;
+    margin: 0 auto 3rem;
   }
 }
 .content__title {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .content__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 1280px) {
   .content__title {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
 }
 .content__artical {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
 }
 @media screen and (min-width: 768px) {
   .content__artical {
     display: flex;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 .content__paragraph {
@@ -160,38 +156,42 @@
 @media screen and (min-width: 768px) {
   .content__paragraph:first-child {
     margin-top: 0;
-    margin-right: 24px;
+    margin-right: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .content__paragraph:first-child {
-    margin-right: 40px;
+    margin-right: 2.5rem;
   }
 }
 
 .photos {
   background-color: #fafafa;
-  padding-top: 56px;
-  padding-bottom: 24px;
+  padding-top: 3.5rem;
+  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 1280px) {
   .photos {
-    padding-top: 48px;
-    padding-bottom: 40px;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
   }
 }
 .photos__title {
   margin-top: 0;
   margin-bottom: 7.5vw;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
   .photos__title {
-    margin-bottom: 48px;
+    margin-bottom: 3rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .photos__title {
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -238,6 +238,8 @@
 .comment {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .comment {
@@ -260,6 +262,8 @@
 .comment__content {
   display: flex;
   flex-direction: column;
+  max-width: 51.375em;
+  align-self: center;
 }
 @media screen and (min-width: 768px) {
   .comment__content {
@@ -291,7 +295,7 @@
   display: flex;
   flex-direction: column;
   width: 70vw;
-  max-width: 70vw;
+  max-width: 453px;
 }
 @media screen and (min-width: 768px) {
   .comment__form {
@@ -334,11 +338,13 @@
 }
 .comment__form--submit {
   height: 3rem;
+  width: 100%;
+  max-width: 14rem;
+  align-self: flex-end;
 }
 @media screen and (min-width: 768px) {
   .comment__form--submit {
     width: 10rem;
-    align-self: flex-end;
   }
 }
 .comment__list {
@@ -353,45 +359,6 @@
   margin-top: 1.5rem;
   border-bottom: 2px solid #e1e1e1;
 }
-.comment__item--lowerWrap {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-.comment__item--delete-btn {
-  background-color: #ffffff;
-  color: #afafaf;
-  transition: 0.3s;
-  padding: 0;
-}
-.comment__item--delete-btn:hover {
-  background-color: #ffffff;
-  color: #d11a2a;
-}
-.comment__item--delete-btn:focus {
-  outline: none;
-}
-.comment__item--like-btn {
-  background-color: #ffffff;
-  color: #323232;
-  transition: 0.3s;
-  margin-right: 0.5rem;
-}
-.comment__item--like-btn:hover {
-  background-color: #ffffff;
-  color: #e31b23;
-}
-.comment__item--like-btn:focus {
-  outline: none;
-}
-.comment__item--liked {
-  color: #98002e;
-}
-.comment__item--liked:hover {
-  background-color: #ffffff;
-  color: #e31b23;
-}
 .comment__item--left {
   background-color: #e1e1e1;
   width: 2.5rem;
@@ -402,32 +369,74 @@
   margin-left: 1rem;
   width: 86%;
 }
-.comment__item--title {
+.comment__comment-title {
   display: flex;
   justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
-  .comment__item--title {
+  .comment__comment-title {
     justify-content: flex-start;
   }
 }
-.comment__item--name, .comment__item--description {
+.comment__comment-title--name {
   overflow-wrap: break-word;
 }
-.comment__item--name {
+.comment__comment-title--name {
   margin: 0;
 }
-.comment__item--date {
+.comment__comment-title--date {
   margin: 0;
   color: #afafaf;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
-  .comment__item--date {
+  .comment__comment-title--date {
     margin-left: 0.5rem;
   }
 }
-.comment__item--description {
+.comment__description {
   width: 100%;
   margin: 1rem 0 0;
+}
+.comment__description--description {
+  overflow-wrap: break-word;
+}
+.comment__like-del-btns {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.comment__like-del-btns--delete {
+  background-color: #ffffff;
+  color: #afafaf;
+  transition: 0.3s;
+  padding: 0;
+}
+.comment__like-del-btns--delete:hover {
+  background-color: #ffffff;
+  color: #d11a2a;
+}
+.comment__like-del-btns--delete:focus {
+  outline: none;
+}
+.comment__like-del-btns--like {
+  background-color: #ffffff;
+  color: #323232;
+  transition: 0.3s;
+  margin-right: 0.5rem;
+}
+.comment__like-del-btns--like:hover {
+  background-color: #ffffff;
+  color: #e31b23;
+}
+.comment__like-del-btns--like:focus {
+  outline: none;
+}
+.comment__like-del-btns--liked {
+  color: #98002e;
+}
+.comment__like-del-btns--liked:hover {
+  background-color: #ffffff;
+  color: #e31b23;
 }/*# sourceMappingURL=main.css.map */

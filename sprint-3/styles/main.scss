@@ -4,6 +4,13 @@
 
 .hero {
   background-image: url(../assets/Images/hero.jpg);
+  &__title {
+    width: 15rem;
+
+    @include tablet {
+      width: 37rem;
+    }
+  }
 }
 
 .about {
@@ -13,16 +20,19 @@
     height: fit-content;
     margin-top: 10vw;
     margin-bottom: 7.5vw;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 2rem;
 
     @include tablet {
-      margin-top: 56px;
-      margin-bottom: 40px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      margin-top: 3.5rem;
+      margin-bottom: 2.5rem;
     }
 
     @include desktop {
-      margin-top: 48px;
-      margin-bottom: 48px;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -38,73 +48,73 @@
 
   &__quote {
     margin-top: 7.5vw;
-    margin-bottom: 32px;
-    line-height: 24px;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
 
     @include tablet {
       font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
 
     @include desktop {
-      margin: 48px auto 40px;
+      margin: 3rem auto 2.5rem;
       width: 56.875vw;
     }
   }
 
   &__person {
     margin-top: 0;
-    margin-bottom: 48px;
-    font-size: 14px;
+    margin-bottom: 3rem;
+    font-size: 0.875rem;
 
     @include tablet {
-      font-size: 16px;
+      font-size: 1rem;
     }
 
     @include desktop {
       width: 56.875vw;
       margin: auto;
-      margin-bottom: 56px;
+      margin-bottom: 3.5rem;
     }
   }
 }
 
 .content {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 
   @include desktop {
     width: 56.875vw;
-    margin: 0 auto 48px;
+    margin: 0 auto 3rem;
   }
 
   &__title {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
 
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 
     @include tablet {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: bold;
     }
 
     @include desktop {
-      margin-bottom: 32px;
+      margin-bottom: 2rem;
     }
   }
 
   &__artical {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
 
     @include tablet {
       display: flex;
 
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
     }
   }
 
@@ -118,11 +128,11 @@
     &:first-child {
       @include tablet {
         margin-top: 0;
-        margin-right: 24px;
+        margin-right: 1.5rem;
       }
 
       @include desktop {
-        margin-right: 40px;
+        margin-right: 2.5rem;
       }
     }
   }
@@ -130,24 +140,28 @@
 
 .photos {
   background-color: $alabaster;
-  padding-top: 56px;
-  padding-bottom: 24px;
+  padding-top: 3.5rem;
+  padding-bottom: 1.5rem;
 
   @include desktop {
-    padding-top: 48px;
-    padding-bottom: 40px;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 7.5vw;
+    font-size: 1.5rem;
+    line-height: 2rem;
 
     @include tablet {
-      margin-bottom: 48px;
+      margin-bottom: 3rem;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
     }
 
     @include desktop {
-      margin-bottom: 64px;
+      margin-bottom: 4rem;
     }
   }
 
@@ -199,6 +213,8 @@
 .comment {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
 
   @include tablet {
     margin-top: 3rem;
@@ -220,6 +236,8 @@
   &__content {
     display: flex;
     flex-direction: column;
+    max-width: 51.375em;
+    align-self: center;
 
     @include tablet {
       width: 67.71vw;
@@ -253,7 +271,7 @@
     flex-direction: column;
 
     width: 70vw;
-    max-width: 70vw;
+    max-width: 453px;
 
     @include tablet {
       margin-left: 1.25rem;
@@ -302,10 +320,12 @@
 
     &--submit {
       height: 3rem;
+      width: 100%;
+      max-width: 14rem;
+      align-self: flex-end;
 
       @include tablet {
         width: 10rem;
-        align-self: flex-end;
       }
     }
   }
@@ -325,14 +345,64 @@
     // padding-bottom: 1.5rem;
     border-bottom: 2px solid $mercury;
 
-    &--lowerWrap {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+    &--left {
+      background-color: $mercury;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
-    &--delete-btn {
+    &--right {
+      font-size: 0.875rem;
+      margin-left: 1rem;
+      width: 86%;
+      @include tablet {
+      }
+    }
+  }
+
+  &__comment-title {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
+
+    &--name {
+      overflow-wrap: break-word;
+    }
+
+    &--name {
+      margin: 0;
+    }
+
+    &--date {
+      margin: 0;
+      color: $silcer;
+      font-weight: 400;
+
+      @include tablet {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &__description {
+    width: 100%;
+    margin: 1rem 0 0;
+
+    &--description {
+      overflow-wrap: break-word;
+    }
+  }
+
+  &__like-del-btns {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    &--delete {
       background-color: $white;
       color: $silcer;
       transition: 0.3s;
@@ -348,7 +418,7 @@
       }
     }
 
-    &--like-btn {
+    &--like {
       background-color: $white;
       color: $black;
       transition: 0.3s;
@@ -370,53 +440,6 @@
         background-color: $white;
         color: #e31b23;
       }
-    }
-
-    &--left {
-      background-color: $mercury;
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-
-    &--right {
-      font-size: 0.875rem;
-      margin-left: 1rem;
-      width: 86%;
-      @include tablet {
-      }
-    }
-
-    &--title {
-      display: flex;
-      justify-content: space-between;
-
-      @include tablet {
-        justify-content: flex-start;
-      }
-    }
-
-    &--name,
-    &--description {
-      overflow-wrap: break-word;
-    }
-
-    &--name {
-      margin: 0;
-    }
-
-    &--date {
-      margin: 0;
-      color: $silcer;
-      font-weight: 400;
-
-      @include tablet {
-        margin-left: 0.5rem;
-      }
-    }
-
-    &--description {
-      width: 100%;
-      margin: 1rem 0 0;
     }
   }
 }

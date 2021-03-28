@@ -16,12 +16,18 @@ const second = new Unit("second", 1);
 const timeUnits = [year, month, week, day, hour, minut, second];
 
 function getTimePassed(date) {
+  // time now
   let timeNow = new Date().getTime();
+  // posted time
   let timeThen = date;
+  // time passed
   let timeDiff = timeNow - timeThen;
+  // to seconds
   timeDiff = Math.round(timeDiff / 1000);
 
+  // find what unit to display
   for (let i = 0; i < timeUnits.length; ++i) {
+    // time divide by units
     let quotient = Math.floor(timeDiff / timeUnits[i].time);
     if (quotient) {
       let plural = "";
@@ -32,13 +38,6 @@ function getTimePassed(date) {
   return `just now`;
 }
 
-// returns a formated date
-function getDate() {
-  const timeElapsed = Date.now();
-  const today = new Date(timeElapsed);
-  return today;
-}
-
 //////// create comment rendereing function ////////
 // make reusable functions for creat
 const liTag = newElement("li", ["comment__item"]);
@@ -47,13 +46,13 @@ const imgTag = newElement("img", [
   "comment__profile-pic",
 ]);
 const contentTag = newElement("div", ["comment__item--right"]);
-const titleTag = newElement("div", ["comment__item--title"]);
-const nameTag = newElement("h4", ["comment__item--name"]);
-const dateTag = newElement("h4", ["comment__item--date"]);
+const titleTag = newElement("div", ["comment__comment-title"]);
+const nameTag = newElement("h4", ["comment__comment-title--name"]);
+const dateTag = newElement("h4", ["comment__comment-title--date"]);
 const descriptionTag = newElement("p", ["comment__item--description"]);
-const deleteTag = newElement("button", ["comment__item--delete-btn"]);
-const likeTag = newElement("button", ["comment__item--like-btn"]);
-const lowerTag = newElement("div", ["comment__item--lowerWrap"]);
+const deleteTag = newElement("button", ["comment__like-del-btns--delete"]);
+const likeTag = newElement("button", ["comment__like-del-btns--like"]);
+const lowerTag = newElement("div", ["comment__like-del-btns"]);
 
 const commentList = document.querySelector(".comment__list");
 
@@ -65,32 +64,37 @@ function displayComment(comment) {
   const titleBlock = titleTag();
   const descriptionBlock = descriptionTag(comment.comment);
   const contentBlock = contentTag();
-  const deletBtn = deleteTag("delete");
-  const likeBtn = likeTag(`${comment.likes} ❤`);
-  if (comment.likes > 0) likeBtn.classList.add("comment__item--liked");
   const lowerWrap = lowerTag();
   const imgBlock = imgTag();
   const liBlock = liTag();
+  const deletBtn = deleteTag("delete");
+  const likeBtn = likeTag(`${comment.likes} ❤`);
+  // if has likes, render heart as red
+  if (comment.likes > 0) likeBtn.classList.add("comment__like-del-btns--liked");
+  // assign id from comment obj to container
   liBlock.id = comment.id;
+
   insertBlock(titleBlock, [nameBlock, dateBlock]);
   insertBlock(lowerWrap, [deletBtn, likeBtn]);
   insertBlock(contentBlock, [titleBlock, descriptionBlock, lowerWrap]);
   insertBlock(liBlock, [imgBlock, contentBlock]);
   insertBlock(commentList, [liBlock]);
+}
 
-  deleteBtns = document.querySelectorAll(".comment__item--delete-btn");
-  likeBtns = document.querySelectorAll(".comment__item--like-btn");
+function newCommentList(comments) {
+  // clear the comment block
+  commentList.innerHTML = "";
+  // render the comment block
+  comments.forEach((comment) => {
+    displayComment(comment);
+  });
+  // asign the all the like buttons with event listener
+  deleteBtns = document.querySelectorAll(".comment__like-del-btns--delete");
+  likeBtns = document.querySelectorAll(".comment__like-del-btns--like");
   for (let i = 0; i < deleteBtns.length; ++i) {
     deleteBtns[i].addEventListener("click", handleDelete);
     likeBtns[i].addEventListener("click", handleLike);
   }
-}
-
-function newCommentList(comments) {
-  commentList.innerHTML = "";
-  comments.forEach((comment) => {
-    displayComment(comment);
-  });
 }
 
 //////////////// event handling ////////////////
@@ -115,12 +119,14 @@ function handleOnSubmit(e) {
   postComments(name, description);
 }
 
+// event handler for like button
 function handleLike(e) {
   e.preventDefault();
   let id = e.target.parentNode.parentNode.parentNode.id;
   likeComment(id);
 }
 
+// event handler for delete button
 function handleDelete(e) {
   e.preventDefault();
   let id = e.target.parentNode.parentNode.parentNode.id;

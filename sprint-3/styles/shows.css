@@ -1,42 +1,27 @@
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Bold.otf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Demi.otf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Medium.otf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Regular.otf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Light.otf");
   font-weight: 300;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
-  font-weight: 100;
 }
 .hero {
   background-image: url(../assets/Images/showsHero.jfif);
@@ -56,7 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 64px;
+  margin-top: 4rem;
 }
 @media screen and (min-width: 768px) {
   .hero__wrapper {
@@ -228,31 +213,30 @@
 }
 @media screen and (min-width: 768px) {
   .shows__header--date, .shows__date {
-    width: 29.17vw;
+    width: 17.17vw;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__header--date, .shows__date {
-    width: 19.17vw;
+    width: 11.17vw;
   }
 }
 @media screen and (min-width: 768px) {
   .shows__header--venue, .shows__header--location, .shows__venue, .shows__location {
-    width: 19.27vw;
+    width: 23.27vw;
+    padding-right: 2vw;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__header--venue, .shows__header--location, .shows__venue, .shows__location {
-    width: 12.78vw;
+    width: 14.78vw;
+    padding-right: 2vw;
   }
 }
 .shows__date {
   font-weight: 600;
 }
-.shows__venue {
-  font-weight: 400;
-}
-.shows__location {
+.shows__venue, .shows__location {
   font-weight: 400;
 }
 .shows__buy-Button {

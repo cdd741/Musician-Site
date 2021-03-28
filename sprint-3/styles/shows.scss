@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 64px;
+    margin-top: 4rem;
 
     @include tablet {
       margin-top: 6rem;
@@ -188,11 +188,11 @@
   &__header--date,
   &__date {
     @include tablet {
-      width: 29.17vw;
+      width: 17.17vw;
     }
 
     @include desktop {
-      width: 19.17vw;
+      width: 11.17vw;
     }
   }
 
@@ -201,11 +201,13 @@
   &__venue,
   &__location {
     @include tablet {
-      width: 19.27vw;
+      width: 23.27vw;
+      padding-right: 2vw;
     }
 
     @include desktop {
-      width: 12.78vw;
+      width: 14.78vw;
+      padding-right: 2vw;
     }
   }
 
@@ -213,10 +215,7 @@
     font-weight: 600;
   }
 
-  &__venue {
-    font-weight: 400;
-  }
-
+  &__venue,
   &__location {
     font-weight: 400;
   }

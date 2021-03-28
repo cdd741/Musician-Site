@@ -1,42 +1,27 @@
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Bold.otf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Demi.otf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Medium.otf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Regular.otf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Light.otf");
   font-weight: 300;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Acenir Next";
-  src: url("../../assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
-  font-weight: 100;
 }
 body {
   font-family: "Acenir Next", sans-serif;
@@ -45,53 +30,53 @@ body {
 }
 
 h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2rem;
+    line-height: 2.75rem;
   }
 }
 
 h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 h4 {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
 }
 @media screen and (min-width: 768px) {
   h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
 h5 {
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
 }
 @media screen and (min-width: 768px) {
   h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -110,7 +95,7 @@ button {
   border-radius: 4px;
   color: #ffffff;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 0.875rem;
   transition: 0.1s;
 }
 button:hover {
@@ -139,7 +124,7 @@ main > * {
 }
 @media screen and (min-width: 768px) {
   .navBar {
-    height: 80px;
+    height: 5rem;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -156,7 +141,7 @@ main > * {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 19px;
+  height: 1.1875rem;
   margin: 5vw auto 5vw;
 }
 @media screen and (min-width: 768px) {
@@ -167,7 +152,7 @@ main > * {
 }
 @media screen and (min-width: 1280px) {
   .navBar__logo {
-    margin-right: 56px;
+    margin-right: 3.5rem;
   }
 }
 .navBar__links {
@@ -188,16 +173,16 @@ main > * {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin-left: 24px;
-    margin-right: 24px;
-    padding: 0 10px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 0 0.625rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .navBar__link {
-    width: 80px;
+    width: 5rem;
     margin-left: 0;
-    margin-right: 56px;
+    margin-right: 3.5rem;
     padding: 0;
   }
 }
@@ -205,7 +190,7 @@ main > * {
   .navBar__link > div {
     display: flex;
     align-items: flex-end;
-    height: 32px;
+    height: 2rem;
   }
 }
 .navBar__link a {
@@ -260,14 +245,14 @@ main > * {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 60px;
-    line-height: 80px;
+    font-size: 3.75rem;
+    line-height: 5rem;
   }
 }
 footer {
   background-color: #323232;
   color: #ffffff;
-  padding-bottom: 54px;
+  padding-bottom: 3.375rem;
 }
 @media screen and (min-width: 768px) {
   footer > * {
@@ -280,8 +265,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 48px;
-    margin-bottom: 48px;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -294,15 +279,15 @@ footer {
   .social {
     margin-left: 14.0625vw;
     margin-right: 14.0625vw;
-    margin-bottom: 54px;
+    margin-bottom: 3.375rem;
   }
 }
 .social__title {
   font-weight: bold;
-  font-size: 36px;
-  margin-left: 10px;
+  font-size: 2rem;
+  margin-left: 0.625rem;
   margin-top: 0;
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .social__title {
@@ -320,16 +305,16 @@ footer {
   display: flex;
   padding-left: 5vw;
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .social__icons {
     margin-bottom: 0;
-    padding-left: 54px;
+    padding-left: 3.375rem;
   }
 }
 .social__icon {
-  margin-right: 34px;
+  margin-right: 2.125rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -347,7 +332,7 @@ footer {
 }
 @media screen and (min-width: 1280px) {
   .social__icon {
-    margin-right: 32px;
+    margin-right: 2rem;
   }
 }
 .social__logo {
@@ -356,12 +341,12 @@ footer {
 @media screen and (min-width: 768px) {
   .social__logo {
     display: block;
-    height: 20px;
+    height: 1.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .social__logo {
-    height: 24px;
+    height: 1.5rem;
   }
 }
 
@@ -394,31 +379,30 @@ footer {
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 5vw;
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .contact__name {
-    margin-bottom: 24px;
-    font-size: 16px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
   }
 }
 .contact__address, .contact__email, .contact__copyright {
   font-weight: 300;
-  line-height: 18px;
+  line-height: 1.125rem;
 }
 @media screen and (min-width: 768px) {
   .contact__address, .contact__email, .contact__copyright {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .contact__address {
   margin-top: 0;
-  margin-bottom: 5vw;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 1280px) {
   .contact__address {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 }
 .contact__email {
@@ -427,12 +411,12 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .contact__email {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .contact__email {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 }
 .contact__copyright {

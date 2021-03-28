@@ -1,20 +1,25 @@
 // Api calls
-const apiKey = "5c7904ce-9fd9-4d9a-91be-11685db1d644";
+// const apiKey = "5c7904ce-9fd9-4d9a-91be-11685db1d644";
+const apikey = "?api_key=<5c7904ce-9fd9-4d9a-91be-11685db1d644>";
+const url = "https://project-1-api.herokuapp.com";
+const comments = "/comments";
+const showdates = "/showdates";
+const like = "/like";
 
-// GET comments
+// GET Request
 function getComments() {
   axios
-    .get(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`)
+    .get(url + comments + apikey)
     .then((res) => {
       newCommentList(res.data);
     })
     .catch((err) => console.log(err));
 }
 
-// POST comment
+// POST Request
 function postComments(name, comment) {
   axios
-    .post(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`, {
+    .post(url + comments + apikey, {
       name: name,
       comment: comment,
     })
@@ -24,36 +29,31 @@ function postComments(name, comment) {
     .catch((err) => console.log(err));
 }
 
-// PUT like comment
+// PUT like Request
 function likeComment(id) {
   axios
-    .put(
-      `https://project-1-api.herokuapp.com/comments/${id}/like?api_key=<${apiKey}>`
-    )
+    .put(url + comments + "/" + id + like + apikey)
     .then(() => {
       getComments();
     })
     .catch((err) => console.log(err));
 }
 
-// DELETE comment
+// DELETE Request
 function deleteComment(id) {
   axios
-    .delete(
-      `https://project-1-api.herokuapp.com/comments/${id}?api_key=<${apiKey}>`
-    )
+    .delete(url + comments + "/" + id + apikey)
     .then(() => {
       getComments();
     })
     .catch((err) => console.log(err));
 }
 
-// GET Shows
+// GET Shows Request
 function getShows() {
   axios
-    .get(`https://project-1-api.herokuapp.com/showdates?api_key=<${apiKey}>`)
+    .get(url + showdates + apikey)
     .then((res) => {
-      console.log(res);
       displayShows(res.data);
     })
     .catch((err) => console.log(err));
