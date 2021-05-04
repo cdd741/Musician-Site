@@ -1,0 +1,442 @@
+@font-face {
+  font-family: "Acenir Next";
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Acenir Next";
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Acenir Next";
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Acenir Next";
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Acenir Next";
+  src: url("../../assets/font/Linotype-AvenirNextLTPro-Light.otf");
+  font-weight: 300;
+}
+body {
+  font-family: "Acenir Next", sans-serif;
+  margin: 0;
+  color: #323232;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.75rem;
+  }
+}
+
+h2 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+h4 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+h5 {
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+button {
+  background-color: #323232;
+  border-style: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.875rem;
+  transition: 0.1s;
+}
+button:hover {
+  background-color: black;
+}
+
+main > * {
+  padding: 0 5vw;
+}
+@media screen and (min-width: 768px) {
+  main > * {
+    padding: 0 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  main > * {
+    padding: 0 14.0625vw;
+  }
+}
+
+.navBar {
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .navBar {
+    height: 5rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navBar {
+    padding: 0 14.0625vw;
+  }
+}
+.navBar__logo {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 1.1875rem;
+  margin: 5vw auto 5vw;
+}
+@media screen and (min-width: 768px) {
+  .navBar__logo {
+    margin: 0;
+    margin-right: 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navBar__logo {
+    margin-right: 3.5rem;
+  }
+}
+.navBar__links {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.navBar__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  box-sizing: content-box;
+}
+@media screen and (min-width: 768px) {
+  .navBar__link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 0 0.625rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navBar__link {
+    width: 5rem;
+    margin-left: 0;
+    margin-right: 3.5rem;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navBar__link > div {
+    display: flex;
+    align-items: flex-end;
+    height: 2rem;
+  }
+}
+.navBar__link a {
+  color: #ffffff;
+  opacity: 0.7;
+}
+.navBar__link a:hover {
+  opacity: 1;
+}
+.navBar__link--selected {
+  border-bottom: 4px solid #ffffff;
+}
+.navBar__link--selected a {
+  opacity: 1;
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(50, 50, 50, 0.5);
+  width: 100%;
+  min-height: 57.1875vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 670px;
+  }
+}
+.hero > * {
+  margin: 0 5vw;
+}
+@media screen and (min-width: 768px) {
+  .hero > * {
+    margin: 0 3.125vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero > * {
+    margin: 0 14.0625vw;
+  }
+}
+.hero__title {
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    line-height: 5rem;
+  }
+}
+footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding-bottom: 3.375rem;
+}
+@media screen and (min-width: 768px) {
+  footer > * {
+    margin: 0 3.125vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social--left {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social {
+    margin-left: 14.0625vw;
+    margin-right: 14.0625vw;
+    margin-bottom: 3.375rem;
+  }
+}
+.social__title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-left: 0.625rem;
+  margin-top: 0;
+  padding-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .social__title {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__title {
+    width: 21.5625vw;
+  }
+}
+.social__icons {
+  display: flex;
+  padding-left: 5vw;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .social__icons {
+    margin-bottom: 0;
+    padding-left: 3.375rem;
+  }
+}
+.social__icon {
+  margin-right: 2.125rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (min-width: 768px) {
+  .social__icon {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .social__icon > li {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__icon {
+    margin-right: 2rem;
+  }
+}
+.social__logo {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .social__logo {
+    display: block;
+    height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__logo {
+    height: 1.5rem;
+  }
+}
+
+.contact {
+  margin-left: 3.125vw;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact {
+    margin-left: 14.0625vw;
+    margin-right: 14.0625vw;
+  }
+}
+.contact a {
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .contact__group {
+    width: 29.17vw;
+  }
+  .contact__group:nth-child(2) {
+    margin: 0 3.125vw;
+  }
+}
+.contact__name {
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 5vw;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__name {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+}
+.contact__address, .contact__email, .contact__copyright {
+  font-weight: 300;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__address, .contact__email, .contact__copyright {
+    font-size: 0.875rem;
+  }
+}
+.contact__address {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1280px) {
+  .contact__address {
+    margin-bottom: 1.5rem;
+  }
+}
+.contact__email {
+  margin-top: 0;
+  margin-bottom: 7.5vw;
+}
+@media screen and (min-width: 768px) {
+  .contact__email {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact__email {
+    margin-bottom: 2.5rem;
+  }
+}
+.contact__copyright {
+  margin-top: 10vw;
+  margin-bottom: 0;
+  margin-left: 3.125vw;
+}
+@media screen and (min-width: 768px) {
+  .contact__copyright {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact__copyright {
+    margin-left: 14.0625vw;
+    margin-right: 14.0625vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__copyright > br {
+    display: none;
+  }
+}/*# sourceMappingURL=common.css.map */
